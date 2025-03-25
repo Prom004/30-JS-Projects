@@ -56,3 +56,28 @@ button:hover {
   margin-bottom: 0;
   display: none;
 }
+#hourly-forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.hourly-item {
+  flex: 0 0 auto;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  color: white;
+}
+.hourly-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.hourly-heading {
+  color: white;
+  margin-top: 10px;
+}
