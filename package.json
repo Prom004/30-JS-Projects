@@ -1,0 +1,24 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "This a repo where we posted different JavaScript challenges",
+  "homepage": "https://github.com/Prom004/30-JS-Projects#readme",
+  "bugs": {
+    "url": "https://github.com/Prom004/30-JS-Projects/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prom004/30-JS-Projects.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.17",
+    "tailwindcss": "^4.0.17"
+  }
+}
