@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         li.querySelector(".done-btn").addEventListener("click", function () {
             li.classList.toggle("completed");
-            li.classList.toggle("opacity-50");
+            li.classList.toggle("line-through");
             this.textContent = li.classList.contains("completed") ? "Undo" : "Done";
             saveTasks();
         });
