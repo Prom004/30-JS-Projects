@@ -6,19 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="/ToDoApp/src/output.css">
 </head>
-<body class=" p-4">
-    <div class="p-4 mx-auto contain-content flex flex-col justify-center items-center gap-3 bg-linear-to-bl from-violet-500 to-fuchsia-500 rounded-[10px]">
+<body class="bg-violet-600 p-4 justify-center">
+    <div class="w-1/2 max-w-2/3 p-4 mx-auto contain-content flex flex-col justify-center items-center gap-3 bg-linear-to-bl from-violet-300 to-fuchsia-500 rounded-[10px] box-border shadow-2xl">
     <h3 class="text-2xl font-extrabold">TO-DO APP</h3>
     <div>
-        <input class="border-1 text-gray-300 py-1 px-2 rounded-[10px]" type="text" id="task" placeholder="Enter Task">
+        <input class="border-1 text-white py-1 px-2 rounded-[10px]" type="text" id="task" placeholder="Enter Task">
         <button class="py-1 px-2 border bg-amber-300 hover:bg-amber-500 rounded-sm" id="add">Add</button>
         <!-- <button class="py-1 px-2 border bg-red-500 hover:bg-red-700 hover:text-white rounded-sm" id="delete">Delete</button> -->
     </div>
-    <div id="list-container flex flex-col justify-center align-center" class="w-full">
-        <h3 class="text-xl font-semibold">Tasks</h3>
-        <ul id="list" class="text-lg font-semibold text-gray-300">
+    <div id="list-container" class="flex flex-col justify-center align-center">
+        <h3 class="text-xl font-semibold text-center">Tasks</h3>
+        <div class="rounded-[10px] p-2">
+        <ul id="list" class="text-lg font-semibold text-white">
         </ul>
-        <button class="py-1 px-2 border bg-red-500 hover:bg-red-700 hover:text-white rounded-sm" id="delete">Delete</button>
+    </div>
+        <!-- <button class="py-1 px-2 border bg-red-500 hover:bg-red-700 hover:text-white rounded-sm" id="delete">Delete</button> -->
     </div>
     <script src="/ToDoApp/src/output.js"></script>
 </div>
