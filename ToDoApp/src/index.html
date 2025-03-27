@@ -7,20 +7,30 @@
     <link rel="stylesheet" href="/ToDoApp/src/output.css">
 </head>
 <body class="bg-violet-600 p-4 justify-center">
-    <div class="w-1/2 max-w-2/3 p-4 mx-auto contain-content flex flex-col justify-center items-center gap-3 bg-linear-to-bl from-violet-300 to-fuchsia-500 rounded-[10px] box-border shadow-2xl">
-    <h3 class="text-2xl font-extrabold">TO-DO APP</h3>
-    <div>
-        <input class="border-1 text-white py-1 px-2 rounded-[10px]" type="text" id="task" placeholder="Enter Task">
+    <div class="w-1/2 max-w-3/5 p-4 mx-auto contain-content flex flex-col justify-center items-center gap-3 bg-linear-to-bl from-violet-300 to-fuchsia-500 rounded-[10px] box-border shadow-2xl">
+        <div class="flex flex-col gap-3 justify-center items-center mt-[50px]">
+        <img class="w-24 h-24" src="to-do-list.png" alt="">
+        <h3 class="text-4xl font-extrabold font-mono ">TO-DO APP</h3>
+        </div>
+    <div class="flex gap-3">
+        <input class="border-1 text-white py-1 px-2 rounded-[10px] w-full" type="text" id="task" placeholder="Enter Task">
         <button class="py-1 px-2 border bg-amber-300 hover:bg-amber-500 rounded-sm" id="add">Add</button>
-        <!-- <button class="py-1 px-2 border bg-red-500 hover:bg-red-700 hover:text-white rounded-sm" id="delete">Delete</button> -->
     </div>
+<div class="relative w-24 h-24 flex items-center justify-center">
+    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+        <circle class="text-gray-300" stroke-width="10" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+        <circle id="progress-circle" class="text-green-500" stroke-width="10" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"
+            stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+    </svg>
+    <span id="progress-text" class="absolute text-white font-bold text-lg">0%</span>
+</div>
+
     <div id="list-container" class="flex flex-col justify-center align-center">
         <h3 class="text-xl font-semibold text-center">Tasks</h3>
-        <div class="rounded-[10px] p-2">
-        <ul id="list" class="text-lg font-semibold text-white">
+        <div class="rounded-[10px] p-9 shadow-2xl ">
+        <ul id="list" class="text-lg font-semibold text-white gap-1">
         </ul>
     </div>
-        <!-- <button class="py-1 px-2 border bg-red-500 hover:bg-red-700 hover:text-white rounded-sm" id="delete">Delete</button> -->
     </div>
     <script src="/ToDoApp/src/output.js"></script>
 </div>
