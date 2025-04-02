@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.17",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.0.17",
+    "three": "^0.175.0"
   }
 }

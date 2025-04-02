@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive To-Do App</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-violet-600 p-4 flex justify-center items-center min-h-screen">
+    <div class="p-6 mx-auto flex flex-col justify-center items-center gap-3 bg-gradient-to-bl from-violet-300 to-fuchsia-500 rounded-lg shadow-2xl">
+                <div class="flex flex-col gap-3 justify-center items-center mt-6">
+            <img class="w-16 h-16 md:w-24 md:h-24" src="/ToDoApp/to-do-list.png" alt="To-Do List Logo">
+            <h3 class="text-2xl md:text-4xl font-extrabold font-mono text-center">TO-DO APP</h3>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 w-full">
+            <input class="border border-gray-300 text-white py-2 px-3 rounded-md w-full focus:outline-none" type="text" id="task" placeholder="Enter Task">
+            <button class="py-2 px-4 bg-amber-400 hover:bg-amber-500 text-black rounded-md font-semibold w-full sm:w-auto" id="add">Add</button>
+        </div>
+        <div class="relative w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300" stroke-width="10" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                <circle id="progress-circle" class="text-green-500" stroke-width="10" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"
+                    stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+            </svg>
+            <span id="progress-text" class="absolute text-white font-bold text-lg">0%</span>
+        </div>
+
+        <div id="list-container" class="flex flex-col justify-center items-center w-full">
+            <h3 class="text-lg md:text-xl font-semibold text-center">Tasks</h3>
+            <div class="w-full border border-gray-400 rounded-lg p-4 shadow-lg max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500">
+                <ul id="list" class="text-lg font-semibold text-white gap-1"></ul>
+            </div>
+        </div>
+
+        <script src="/ToDoApp/output.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 3D Portfolio</title>
+    <style> 
+        body { margin: 0; overflow: hidden; background: black; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module">
+        import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.128/examples/jsm/loaders/GLTFLoader.js';
+
+        // 🚀 Scene, Camera, Renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // 🔥 Cyberpunk Neon Lighting
+        const light1 = new THREE.PointLight(0xff00ff, 2, 50);  // Neon Pink
+        light1.position.set(10, 10, 10);
+        scene.add(light1);
+
+        const light2 = new THREE.PointLight(0x00ffff, 2, 50);  // Neon Blue
+        light2.position.set(-10, -10, 10);
+        scene.add(light2);
+
+        // 🌐 Cyberpunk Grid Floor
+        const gridHelper = new THREE.GridHelper(50, 50, 0x00ffff, 0x000000);
+        gridHelper.position.y = -2;
+        scene.add(gridHelper);
+
+        // 🔳 Floating Neon Cube
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshStandardMaterial({ color: 0x00ff00, emissive: 0x00ff00, emissiveIntensity: 1 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        cube.position.y = 1;
+
+        // 📌 Load Cyberpunk 3D Model (Optional)
+        const loader = new GLTFLoader();
+        loader.load('https://threejs.org/examples/models/gltf/scene.gltf', function(gltf) {
+            const model = gltf.scene;
+            model.position.set(0, -1, -5);
+            scene.add(model);
+        });
+
+        // 🎥 Camera Position
+        camera.position.z = 5;
+
+        // 🔄 Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>
